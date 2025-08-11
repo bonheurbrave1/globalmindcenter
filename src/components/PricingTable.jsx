@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
-import { CheckCircle, Zap, Award, Clock, Monitor } from 'react-feather';
+import { CheckCircle, Zap, Award } from 'react-feather';
 import { Link } from 'react-router-dom';
+
 export default function PricingTable() {
   const pricing = {
     courseFee: "700,000 RWF",
@@ -40,130 +41,49 @@ export default function PricingTable() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {/* Pricing Card 1 */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-shadow duration-300"
-          >
-            <div className="p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 rounded-full bg-blue-50 text-blue-600 mr-4">
-                  <Clock size={24} />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-800">Standard Plan</h3>
+        {/* Single Pricing Card (Centered) */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-shadow duration-300"
+        >
+          <div className="p-8">
+            <div className="flex items-center mb-6">
+              <div className="p-3 rounded-full bg-blue-50 text-blue-600 mr-4">
+                <Zap size={24} />
               </div>
-              
-              <div className="mb-8">
-                <div className="text-5xl font-bold text-gray-900 mb-2">{pricing.courseFee}</div>
-                <div className="text-gray-500">+ {pricing.examFee} PMI exam fee</div>
-              </div>
-              
-              <ul className="space-y-4 mb-8">
-                {pricing.features.slice(0, 4).map((feature, index) => (
-                  <li key={index} className="flex items-start">
-                    <CheckCircle className="text-green-500 mt-1 mr-3 flex-shrink-0" />
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              <Link to={"/contact"}>
-              <button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all transform hover:-translate-y-1">
-                Contact Us
-              </button>
-              </Link>
+              <h3 className="text-2xl font-bold text-gray-800">PMP Certification</h3>
+              <span className="ml-auto bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full">
+                Best Value
+              </span>
             </div>
-          </motion.div>
-
-          {/* Featured Pricing Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="relative"
-          >
-            <div className="absolute -top-4 -left-4 -right-4 h-4 bg-gradient-to-r from-purple-500 to-blue-500 rounded-t-2xl"></div>
-            <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden transform hover:scale-[1.02] transition-transform duration-300">
-              <div className="p-8">
-                <div className="flex items-center mb-6">
-                  <div className="p-3 rounded-full bg-purple-50 text-purple-600 mr-4">
-                    <Zap size={24} />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-800">Premium Plan</h3>
-                  <span className="ml-auto bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full">
-                    Most Popular
-                  </span>
-                </div>
-                
-                <div className="mb-8">
-                  <div className="text-5xl font-bold text-gray-900 mb-2">750,000 RWF</div>
-                  <div className="text-gray-500">+ {pricing.examFee} PMI exam fee</div>
-                  <div className="text-sm text-green-600 mt-1">Save 50,000 RWF with bundle</div>
-                </div>
-                
-                <ul className="space-y-4 mb-8">
-                  {pricing.features.map((feature, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle className="text-green-500 mt-1 mr-3 flex-shrink-0" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link to={"/enroll"}>
-                <button className="w-full bg-gradient-to-r from-purple-500 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all transform hover:-translate-y-1 shadow-lg">
-                  Enroll Now
-                </button>
-                </Link>
+            
+            <div className="mb-8">
+              <div className="text-5xl font-bold text-gray-900 mb-2">{pricing.courseFee}</div>
+              <div className="text-gray-500">+ {pricing.examFee} PMI exam fee</div>
+              <div className="text-sm text-gray-500 mt-2">
+                Duration: {pricing.duration} | Delivery: {pricing.delivery}
               </div>
             </div>
-          </motion.div>
-
-          {/* Pricing Card 3 */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-shadow duration-300"
-          >
-            <div className="p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 rounded-full bg-green-50 text-green-600 mr-4">
-                  <Monitor size={24} />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-800">Self-Paced</h3>
-              </div>
-              
-              <div className="mb-8">
-                <div className="text-5xl font-bold text-gray-900 mb-2">500,000 RWF</div>
-                <div className="text-gray-500">+ {pricing.examFee} PMI exam fee</div>
-              </div>
-              
-              <ul className="space-y-4 mb-8">
-                {pricing.features.slice(0, 3).map((feature, index) => (
-                  <li key={index} className="flex items-start">
-                    <CheckCircle className="text-green-500 mt-1 mr-3 flex-shrink-0" />
-                    <span>{feature}</span>
-                  </li>
-                ))}
-                <li className="flex items-start text-gray-400">
-                  <CheckCircle className="mt-1 mr-3 flex-shrink-0" />
-                  <span>Recorded lectures only</span>
+            
+            <ul className="space-y-4 mb-8">
+              {pricing.features.map((feature, index) => (
+                <li key={index} className="flex items-start">
+                  <CheckCircle className="text-green-500 mt-1 mr-3 flex-shrink-0" />
+                  <span>{feature}</span>
                 </li>
-              </ul>
-              
-              <Link to={`/contact`}>
-              <button className="w-full bg-gray-100 text-gray-800 py-3 px-6 rounded-lg font-semibold hover:bg-gray-200 transition-all">
-                Contact Us
+              ))}
+            </ul>
+
+            <Link to="/enroll">
+              <button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all transform hover:-translate-y-1">
+                Enroll Now
               </button>
-              </Link>
-            </div>
-          </motion.div>
-        </div>
+            </Link>
+          </div>
+        </motion.div>
 
         {/* Payment Options */}
         <motion.div
@@ -186,8 +106,6 @@ export default function PricingTable() {
               </div>
             ))}
           </div>
-          <p className="text-center text-gray-500 mt-6 text-sm">
-          </p>
         </motion.div>
       </div>
     </section>
