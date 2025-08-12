@@ -2,14 +2,14 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Menu, X } from 'react-feather';
-import { FiCalendar } from 'react-icons/fi'; // Added for the calendar icon
+import { FiCalendar } from 'react-icons/fi';
 import logo from "../assets/logo.png";
 
 const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'About Us', path: '/about' },
   { name: 'PMP Course', path: '/course' },
-  { name: 'Enroll', path: '/enroll' },
+  { name: 'Enroll', target: "__blank", path: 'https://docs.google.com/forms/d/1YY29tM4r8NT3GHT5qcAuIn7jWZmn4Scxl76ysUE_CzM/edit' },
   { name: 'Resources', path: '/resources' },
   { name: 'Contact', path: '/contact' },
 ];
@@ -22,24 +22,32 @@ export default function AnimatedHeader() {
 
   return (
     <>
-      {/* Session Banner - Added above the header */}
-      <div className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-blue-600 to-blue-800">
-        <div className="container mx-auto px-4 py-1.5 text-center text-white text-sm font-medium">
-          <div className="flex items-center justify-center">
-            <FiCalendar className="mr-2" />
-            <span>Enroll now for August 25th - September 23rd session! <a href="https://docs.google.com/forms/d/1YY29tM4r8NT3GHT5qcAuIn7jWZmn4Scxl76ysUE_CzM/edit" target='__blank' className='bg-orange-500 text-white px-2'>Enroll now</a></span>
-          </div>
-        </div>
+      {/* Session Banner - Modernized */}
+      <div className="fixed top-0 left-0 w-full z-50 flex justify-center bg-gradient-to-r from-blue-600 to-blue-800 py-3 px-4">
+        <button className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 p-[2px] shadow-lg hover:shadow-xl transition duration-300 ease-out">
+          <span className="relative flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-gray-900 transition-colors duration-300 group-hover:bg-transparent group-hover:text-white">
+            <FiCalendar className="text-lg" />
+            Join the Global Mind Center — 25 Aug, 2025 to 23 Sep, 2025
+            <a
+              href="https://docs.google.com/forms/d/1YY29tM4r8NT3GHT5qcAuIn7jWZmn4Scxl76ysUE_CzM/edit"
+              target="__blank"
+              className="ml-2 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500 px-4 py-1 text-white text-xs font-bold shadow-sm hover:from-indigo-600 hover:to-pink-600 transition"
+            >
+              Enroll Now
+            </a>
+          </span>
+        </button>
       </div>
 
-      {/* Header - Adjusted to account for banner */}
-      <motion.header 
+      {/* Header - shifted down to avoid banner overlap */}
+      <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ type: 'spring', stiffness: 100 }}
-        className="fixed top-8 left-0 w-full z-40 bg-white shadow-md" // Changed z-index to 40
+        className="fixed top-[70px] left-0 w-full z-40 bg-white shadow-md"
       >
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+          {/* Logo */}
           <NavLink to="/" className="flex items-center">
             <img
               src={logo}
@@ -51,9 +59,10 @@ export default function AnimatedHeader() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            {navLinks.map(({ name, path }) => (
-              <NavLink 
+            {navLinks.map(({ name, target, path }) => (
+              <NavLink
                 key={name}
+                target={target}
                 to={path}
                 className={({ isActive }) =>
                   `${baseLinkClass} ${isActive ? activeLinkClass : ''}`
@@ -65,7 +74,7 @@ export default function AnimatedHeader() {
           </nav>
 
           {/* Mobile menu button */}
-          <button 
+          <button
             className="md:hidden p-2"
             onClick={() => setIsOpen(!isOpen)}
           >
@@ -99,8 +108,8 @@ export default function AnimatedHeader() {
         )}
       </motion.header>
 
-      {/* Adjusted padding to account for both banner and header */}
-      <div className="pt-32"></div> {/* Increased from pt-24 to pt-32 */}
+      {/* Padding for banner + header */}
+      <div className="pt-[150px]"></div>
     </>
   );
 }

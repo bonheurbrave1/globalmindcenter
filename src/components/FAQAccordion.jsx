@@ -4,15 +4,15 @@ import { ChevronDown, ChevronUp } from 'react-feather';
 
 const faqs = [
   {
-    question: "What is the duration of the PMP course?",
-    answer: "The PMP certification course runs for 2 months, providing comprehensive coverage of all exam topics."
+    question: "What is the duration of the PMP® course?",
+    answer: "The PMP® certification course runs for 2 months, providing comprehensive coverage of all exam topics."
   },
   {
     question: "How much does the course cost?",
     answer: "The course fee is 700,000 RWF plus the PMI exam fee of $429. We offer flexible payment options."
   },
   {
-    question: "What are the prerequisites for the PMP exam?",
+    question: "What are the prerequisites for the PMP® exam?",
     answer: "You need either: 1) A secondary degree with 5 years of project management experience and 35 hours of project management education, or 2) A four-year degree with 3 years of project management experience and 35 hours of project management education."
   },
   {
@@ -24,7 +24,7 @@ const faqs = [
     answer: "You'll receive comprehensive study guides, practice exams, and access to our online learning portal with additional resources."
   },
   {
-    question: "How do I register for the PMP exam?",
+    question: "How do I register for the PMP® exam?",
     answer: "After completing our course, we'll guide you through the PMI registration process to schedule your exam at a testing center or online."
   }
 ];

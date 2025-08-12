@@ -38,7 +38,7 @@ export default function EnrollmentForm() {
           className="max-w-2xl mx-auto bg-white rounded-xl shadow-md overflow-hidden p-8"
         >
           <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
-            Enroll in PMP Course
+            Enroll in PMP® Course
           </h2>
 
           <Formik

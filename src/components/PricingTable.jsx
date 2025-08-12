@@ -9,7 +9,7 @@ export default function PricingTable() {
     duration: "2 months",
     delivery: "Physical and Online",
     features: [
-      "Comprehensive PMP training",
+      "Comprehensive PMP® training",
       "PMBOK® Guide coverage",
       "5 full-length practice exams",
       "Exam application guidance",
