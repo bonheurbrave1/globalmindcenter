@@ -3,6 +3,8 @@ import { FaCheckCircle, FaGlobe, FaChartLine, FaUserTie, FaAward, FaCalendarAlt 
 import { TiTick } from "react-icons/ti";
 import { Link } from "react-feather";
 import advantages from "../assets/adv.jpeg"
+import pmpbackground from "../assets/pmpbackground.jpg"
+import pmp from "../assets/pmp.avif"
 export default function Course() {
   const fadeUp = {
     hidden: { opacity: 0, y: 20 },
@@ -14,11 +16,11 @@ export default function Course() {
       {/* Hero Section */}
       <div className="relative h-[400px] md:h-[500px]">
         <img
-          src="https://images.unsplash.com/photo-1581091870622-1c8a1a6c3b1a?auto=format&fit=crop&w=1470&q=80"
+          src={pmpbackground}
           alt="PMP Certification"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-600/80 flex items-center justify-center">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-900/45 to-blue-600/45  flex items-center justify-center">
           <div className="text-center px-4">
             <motion.h1
               initial={{ opacity: 0, y: -20 }}
@@ -124,7 +126,7 @@ export default function Course() {
               </div>
               <div className="relative min-h-64">
                 <img
-                  src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?auto=format&fit=crop&w=870&q=80"
+                  src={pmp}
                   alt="Course Overview"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
