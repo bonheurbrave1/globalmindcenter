@@ -26,7 +26,7 @@ export default function HeroBanner() {
           </div>
 
           <h1 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
-            Project Management Proffessional (PMP) Certification
+            Project Management Professional (PMP®) Certification
           </h1>
           
           <p className="text-xl mb-8">
