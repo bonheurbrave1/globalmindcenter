@@ -1,13 +1,43 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Menu, X } from 'react-feather';
+import { Menu, X, ChevronDown, ChevronUp } from 'react-feather';
 import { FiCalendar } from 'react-icons/fi';
 import logo from "../assets/logo.png";
 
 const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'About Us', path: '/about' },
+  { 
+    name: 'What We Do',
+    subLinks: [
+      { 
+        name: 'Customized Training',
+        items: [
+          { name: 'Project Finance', path: '/project-finance' },
+          { name: 'Leadership Training', path: '/leadership-training' },
+          { name: 'Data Analysis', path: '/data-analysis' }
+        ]
+      },
+      { 
+        name: 'Professional Certification',
+        items: [
+          { name: 'Project management professional (PMP) certification by PMI', path: '/pmp-certification' },
+          { name: 'Professional Business analysis (PBA)', path: '/pba-certification' },
+          { name: 'Agile Certified Practitioner Certificate (ACP)', path: '/acp-certification' },
+          { name: 'PMI Risk Management Professional PMI-RMP®', path: '/risk-management-certification' }
+        ]
+      },
+      { 
+        name: 'On-Job Training',
+        items: [
+          { name: 'Microsoft Project', path: '/microsoft-project-training' },
+          { name: 'Fundamentals of Project Management', path: '/project-management-fundamentals' },
+          { name: 'Team Building', path: '/team-building' }
+        ]
+      }
+    ]
+  },
   { name: 'PMP Course', path: '/course' },
   { name: 'Enroll', target: "__blank", path: 'https://docs.google.com/forms/d/1YY29tM4r8NT3GHT5qcAuIn7jWZmn4Scxl76ysUE_CzM/edit' },
   { name: 'Resources', path: '/resources' },
@@ -16,9 +46,34 @@ const navLinks = [
 
 export default function AnimatedHeader() {
   const [isOpen, setIsOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
+  const dropdownRef = useRef(null);
 
   const baseLinkClass = "text-gray-700 hover:text-primary transition-colors font-medium";
   const activeLinkClass = "border-b-2 border-black";
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setOpenDropdown(null);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  const toggleDropdown = (index) => {
+    setOpenDropdown(openDropdown === index ? null : index);
+  };
+
+  const closeAllDropdowns = () => {
+    setOpenDropdown(null);
+    setIsOpen(false);
+  };
 
   return (
     <>
@@ -32,6 +87,7 @@ export default function AnimatedHeader() {
               href="https://docs.google.com/forms/d/1YY29tM4r8NT3GHT5qcAuIn7jWZmn4Scxl76ysUE_CzM/edit"
               target="__blank"
               className="ml-2 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500 px-4 py-1 text-white text-xs font-bold shadow-sm hover:from-indigo-600 hover:to-pink-600 transition"
+              onClick={closeAllDropdowns}
             >
               Enroll Now
             </a>
@@ -48,7 +104,11 @@ export default function AnimatedHeader() {
       >
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           {/* Logo */}
-          <NavLink to="/" className="flex items-center">
+          <NavLink 
+            to="/" 
+            className="flex items-center"
+            onClick={closeAllDropdowns}
+          >
             <img
               src={logo}
               alt="Global Mind Center Logo"
@@ -58,19 +118,66 @@ export default function AnimatedHeader() {
           </NavLink>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            {navLinks.map(({ name, target, path }) => (
-              <NavLink
-                key={name}
-                target={target}
-                to={path}
-                className={({ isActive }) =>
-                  `${baseLinkClass} ${isActive ? activeLinkClass : ''}`
-                }
-              >
-                {name}
-              </NavLink>
-            ))}
+          <nav className="hidden md:flex space-x-8" ref={dropdownRef}>
+            {navLinks.map((link, index) => {
+              if (link.subLinks) {
+                return (
+                  <div key={link.name} className="relative">
+                    <button 
+                      className={`${baseLinkClass} flex items-center gap-1 ${openDropdown === index ? activeLinkClass : ''}`}
+                      onClick={() => toggleDropdown(index)}
+                    >
+                      {link.name}
+                      {openDropdown === index ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                    </button>
+                    {openDropdown === index && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        className="fixed left-0 right-0 mt-2 bg-white shadow-lg py-8 z-50 border-t border-gray-100"
+                      >
+                        <div className="container mx-auto px-8">
+                          <div className="flex justify-between gap-12">
+                            {link.subLinks.map((section, sectionIndex) => (
+                              <div key={sectionIndex} className="flex-1 max-w-xs">
+                                <h3 className="text-lg font-semibold text-gray-900 mb-4 text-lime-500">{section.name}</h3>
+                                <ul className="space-y-3">
+                                  {section.items.map((item, itemIndex) => (
+                                    <li key={itemIndex}>
+                                      <NavLink
+                                        to={item.path}
+                                        className="text-gray-600 hover:text-lime-600 transition-colors block py-1.5"
+                                        onClick={closeAllDropdowns}
+                                      >
+                                        {item.name}
+                                      </NavLink>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </div>
+                );
+              }
+              return (
+                <NavLink
+                  key={link.name}
+                  target={link.target}
+                  to={link.path}
+                  className={({ isActive }) =>
+                    `${baseLinkClass} ${isActive ? activeLinkClass : ''}`
+                  }
+                  onClick={closeAllDropdowns}
+                >
+                  {link.name}
+                </NavLink>
+              );
+            })}
           </nav>
 
           {/* Mobile menu button */}
@@ -91,18 +198,56 @@ export default function AnimatedHeader() {
             className="md:hidden bg-white px-4 pb-4"
           >
             <div className="flex flex-col space-y-3">
-              {navLinks.map(({ name, path }) => (
-                <NavLink
-                  key={name}
-                  to={path}
-                  className={({ isActive }) =>
-                    `py-2 text-gray-700 hover:text-primary transition-colors ${isActive ? activeLinkClass : ''}`
-                  }
-                  onClick={() => setIsOpen(false)}
-                >
-                  {name}
-                </NavLink>
-              ))}
+              {navLinks.map((link) => {
+                if (link.subLinks) {
+                  return (
+                    <div key={link.name} className="flex flex-col">
+                      <button 
+                        className="py-2 text-gray-700 hover:text-primary transition-colors flex items-center justify-between"
+                        onClick={() => toggleDropdown(navLinks.indexOf(link))}
+                      >
+                        {link.name}
+                        {openDropdown === navLinks.indexOf(link) ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                      </button>
+                      {openDropdown === navLinks.indexOf(link) && (
+                        <div className="pl-4">
+                          {link.subLinks.map((section, sectionIndex) => (
+                            <div key={sectionIndex} className="mt-4">
+                              <h4 className="font-medium text-gray-900">{section.name}</h4>
+                              <ul className="pl-4 mt-2 space-y-2">
+                                {section.items.map((item, itemIndex) => (
+                                  <li key={itemIndex}>
+                                    <NavLink
+                                      to={item.path}
+                                      className="text-gray-600 hover:text-primary transition-colors"
+                                      onClick={closeAllDropdowns}
+                                    >
+                                      {item.name}
+                                    </NavLink>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  );
+                }
+                return (
+                  <NavLink
+                    key={link.name}
+                    to={link.path}
+                    target={link.target}
+                    className={({ isActive }) =>
+                      `py-2 text-gray-700 hover:text-primary transition-colors ${isActive ? activeLinkClass : ''}`
+                    }
+                    onClick={closeAllDropdowns}
+                  >
+                    {link.name}
+                  </NavLink>
+                );
+              })}
             </div>
           </motion.div>
         )}

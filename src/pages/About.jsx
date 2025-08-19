@@ -5,19 +5,33 @@ import pmilogo from '../assets/pmilogo.png';
 import { TiTick } from 'react-icons/ti';
 import { FaLinkedin, FaTwitter, FaFacebook, FaGlobeAfrica, FaChalkboardTeacher, FaUserTie } from 'react-icons/fa';
 import image from "../assets/homeimage.jpg";
+import pamela from "../assets/pamella.jpeg"
+import katumba from "../assets/katumba.jpeg"
 import anelson from "../assets/anelson.jpeg"
 const trainers = [
   {
-    role: "Training and Consultant",
-    name: "Dr. Anelson Masindwe",
-    degrees: "MSc. PMP®, PBA®, ACP®, RMP & Prince2 Practitioner",
+    role: "Project Management Consultant | Leadership Development Specialist | MBA Lecturer | Certified Coach",
+    name: "James Katumba",
+    degrees: "MSc. PMP®, PBA®, ACP®,",
     social: {
       linkedin: "https://linkedin.com/in/robertrunazi",
       twitter: "https://twitter.com/robertrunazi",
       facebook: "https://facebook.com/robertrunazi",
     },
-    bio: `A consultant, trainer and coach with extensive experience in Project Management, Business Analysis, Business Strategy, Financial analysis and Project finance. Experience spans Financial services, Manufacturing, Engineering, and Academia with strong business acumen. Holds an MSc in International Management from SOAS, University of London. Certified PMP, PBA, ACP with PMI and a certified Prince2 Practitioner by Axelos.`,
-    image: anelson,
+    bio: `James Katumba is a seasoned Project Management Consultant, Leadership Development Specialist, and John C. Maxwell Certified Coach with over five years of experience in training and consultancy. He supports organizations across Uganda and Kigali in capacity building, leadership development, and strategic execution. James has facilitated PMP® and CAPM® prep programs with PMI ATPs like MAT Abacus, Agile Masters, and Crosslinks, empowering hundreds of learners. As a lecturer in Heriot-Watt University’s MBA program, he guides students through project governance and stakeholder engagement. His coaching, grounded in trust and accountability, helps teams unlock potential and align with purpose. James brings clarity, strategy, and practical tools to every engagement`,
+    image: katumba,
+  },
+  {
+    role: "facilitators for the September Cohort. ",
+    name: "Pamela Nabisaalu",
+    degrees: "MSc. PMP®, PBA®, ACP®,",
+    social: {
+      linkedin: "https://linkedin.com/in/robertrunazi",
+      twitter: "https://twitter.com/robertrunazi",
+      facebook: "https://facebook.com/robertrunazi",
+    },
+    bio: `Pamela Nabisaalu is a Uganda-based Project Management Consultant with over five years of experience guiding project teams across sectors. He has managed and supported the delivery of 60+ high-impact projects worth over $1 billion, navigating complex stakeholder ecosystems with strategic coordination and adaptive leadership. James is also a Change Management Expert, known for driving organizational transformation and aligning teams with strategic goals. He holds a PMP, CSM, and MBA, enabling him to operate effectively in both agile and traditional project environments. As co-founder of Ascend Professionals Limited, he leads efforts in project training and delivery. His work focuses on empowering individuals and organizations with practical, results-driven solutions`,
+    image: pamela,
   },
 ];
 
@@ -73,19 +87,19 @@ export default function About() {
                   <ul className="space-y-2 text-sm md:text-base">
                     <li className="flex items-start">
                       <TiTick className="text-green-400 mr-2 mt-1 flex-shrink-0" />
-                      PMI-approved course content
+                      Strategic Planning & Execution
                     </li>
                     <li className="flex items-start">
                       <TiTick className="text-green-400 mr-2 mt-1 flex-shrink-0" />
-                      Flexible learning options
+                      Project Leadership & Governance
                     </li>
                     <li className="flex items-start">
                       <TiTick className="text-green-400 mr-2 mt-1 flex-shrink-0" />
-                      Small class sizes
+                      Organisational Learning & Culture Design
                     </li>
                     <li className="flex items-start">
                       <TiTick className="text-green-400 mr-2 mt-1 flex-shrink-0" />
-                      Real-world case studies
+                      Team Synergy & Performance Coaching
                     </li>
                     <li className="flex items-start">
                       <TiTick className="text-green-400 mr-2 mt-1 flex-shrink-0" />

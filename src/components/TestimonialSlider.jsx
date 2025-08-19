@@ -1,25 +1,26 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight, MessageSquare } from 'react-feather';
-
+import jdedieu from "../assets/jdedieu.jpeg"
+import noimage from "../assets/noimage.png"
 const testimonials = [
   {
     id: 1,
-    name: "Alice Uwase",
-    role: "Project Manager, Kigali",
+    name: "Mr. Jean de Dieu Ndacyayisenga",
+    role: "Project Manager, Kigali UN Women",
     content:
-      "The PMP course at Global Mind Center transformed my career. The instructors were knowledgeable and the materials were comprehensive. I passed my exam on the first try!",
+      "I, Mr. Jean de Dieu Ndacyayisenga, would like to extend my heartfelt appreciation to Global Mind Center for facilitating an outstanding PMP Training session. Your team's professionalism, dedication, and engaging approach truly elevated the learning experience. The trainers showcased deep expertise, breaking down complex concepts into clear, practical insights. Through interactive learning, real-world examples, and hands-on exercises, they created a dynamic environment that boosted our confidence in PMP methodologies. From the well-structured content to the warm and supportive atmosphere, it was evident that delivering a superior learning experience is at the core of your mission.Thank you once again for your commitment to excellence!",
     rating: 5,
-    image: "https://randomuser.me/api/portraits/women/44.jpg", // example image URL
+    image: jdedieu
   },
   {
     id: 2,
-    name: "John Mugisha",
-    role: "IT Manager, Nairobi",
+    name: "Téphane Mugabe",
+    role: "PMP Candidate | Project Manager & Development Professional at European union delagation to Republic of Rwanda",
     content:
-      "Excellent training program! The practical examples helped me apply concepts directly to my work. Highly recommend for anyone serious about project management.",
+      "Studying for the PMP certification has been a transformative and empowering experience.  It gave me a structured understanding of project management, from planning to delivery. Tools like WBS, stakeholder mapping, and risk analysis now guide my daily practice. The course helped me shift from intuition to globally recognized standards. I highly recommend studying at the Global Mind Center for a focused and supportive learning journey",
     rating: 5,
-    image: "https://randomuser.me/api/portraits/men/46.jpg",
+    image: noimage
   },
   {
     id: 3,
