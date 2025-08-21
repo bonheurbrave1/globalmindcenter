@@ -47,7 +47,7 @@ const navLinks = [
 export default function AnimatedHeader() {
   const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 400);
   const dropdownRef = useRef(null);
 
   const baseLinkClass = "text-gray-700 hover:text-primary transition-colors font-medium";
@@ -56,7 +56,7 @@ export default function AnimatedHeader() {
   // Check screen size on resize
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
+      setIsSmallScreen(window.innerWidth < 400);
     };
 
     window.addEventListener('resize', handleResize);
@@ -87,25 +87,25 @@ export default function AnimatedHeader() {
   };
 
   // Calculate header position based on screen size
-  const headerTop = isMobile ? 'top-[45px]' : 'top-[70px]';
+  const headerTop = isSmallScreen ? 'top-[38px]' : 'top-[45px]';
 
   return (
     <>
-      {/* Session Banner - Responsive height */}
-      <div className={`fixed top-0 left-0 w-full z-50 flex justify-center bg-gradient-to-r from-blue-600 to-blue-800 ${isMobile ? 'py-1' : 'py-2'} px-4`}>
+      {/* Session Banner - Ultra compact for small screens */}
+      <div className={`fixed top-0 left-0 w-full z-50 flex justify-center bg-gradient-to-r from-blue-600 to-blue-800 ${isSmallScreen ? 'py-0' : 'py-1'} px-2`}>
         <button className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 p-[1px] shadow-lg hover:shadow-xl transition duration-300 ease-out max-w-full">
-          <span className="relative flex flex-col sm:flex-row items-center gap-1 sm:gap-2 rounded-full bg-white px-3 sm:px-6 py-1 sm:py-3 text-xs sm:text-sm font-semibold text-gray-900 transition-colors duration-300 group-hover:bg-transparent group-hover:text-white">
-            <FiCalendar className="text-sm sm:text-lg" />
+          <span className="relative flex items-center gap-1 rounded-full bg-white px-2 py-1 text-xs font-semibold text-gray-900 transition-colors duration-300 group-hover:bg-transparent group-hover:text-white">
+            <FiCalendar className="text-xs" />
             <span className="text-center">
-              {isMobile ? '25 Aug - 23 Sep 2025' : 'Join the Global Mind Center — 25 Aug, 2025 to 23 Sep, 2025'}
+              {isSmallScreen ? '25 Aug - 23 Sep' : '25 Aug - 23 Sep 2025'}
             </span>
             <a
               href="https://docs.google.com/forms/d/1YY29tM4r8NT3GHT5qcAuIn7jWZmn4Scxl76ysUE_CzM/edit"
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-0 sm:ml-2 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500 px-3 py-1 text-white text-xs font-bold shadow-sm hover:from-indigo-600 hover:to-pink-600 transition"
+              className="ml-1 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500 px-2 py-0.5 text-white text-xs font-bold shadow-sm hover:from-indigo-600 hover:to-pink-600 transition"
             >
-              Enroll Now
+              Enroll
             </a>
           </span>
         </button>
@@ -118,8 +118,8 @@ export default function AnimatedHeader() {
         transition={{ type: 'spring', stiffness: 100 }}
         className={`fixed ${headerTop} left-0 w-full z-40 bg-white shadow-md`}
       >
-        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          {/* Logo */}
+        <div className="container mx-auto px-3 py-2 flex justify-between items-center">
+          {/* Logo - smaller on small screens */}
           <NavLink 
             to="/" 
             className="flex items-center"
@@ -128,13 +128,15 @@ export default function AnimatedHeader() {
             <img
               src={logo}
               alt="Global Mind Center Logo"
-              className={`${isMobile ? 'w-20 h-8' : 'w-28 h-12'} object-contain mr-3`}
+              className={`${isSmallScreen ? 'w-16 h-6' : 'w-20 h-8'} object-contain mr-2`}
             />
-            <span className={`${isMobile ? 'text-lg' : 'text-xl'} font-semibold`}>Global Mind Center</span>
+            <span className={`${isSmallScreen ? 'text-sm' : 'text-lg'} font-semibold`}>
+              {isSmallScreen ? 'GMC' : 'Global Mind Center'}
+            </span>
           </NavLink>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8" ref={dropdownRef}>
+          <nav className="hidden md:flex space-x-6" ref={dropdownRef}>
             {navLinks.map((link, index) => {
               if (link.subLinks) {
                 return (
@@ -144,26 +146,26 @@ export default function AnimatedHeader() {
                       onClick={() => toggleDropdown(index)}
                     >
                       {link.name}
-                      {openDropdown === index ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                      {openDropdown === index ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
                     </button>
                     {openDropdown === index && (
                       <motion.div
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
-                        className="fixed left-0 right-0 mt-2 bg-white shadow-lg py-8 z-50 border-t border-gray-100"
+                        className="fixed left-0 right-0 mt-2 bg-white shadow-lg py-6 z-50 border-t border-gray-100"
                       >
-                        <div className="container mx-auto px-8">
-                          <div className="flex justify-between gap-12">
+                        <div className="container mx-auto px-6">
+                          <div className="flex justify-between gap-10">
                             {link.subLinks.map((section, sectionIndex) => (
                               <div key={sectionIndex} className="flex-1 max-w-xs">
-                                <h3 className="text-lg font-semibold text-gray-900 mb-4 text-lime-500">{section.name}</h3>
-                                <ul className="space-y-3">
+                                <h3 className="text-base font-semibold text-gray-900 mb-3 text-lime-500">{section.name}</h3>
+                                <ul className="space-y-2">
                                   {section.items.map((item, itemIndex) => (
                                     <li key={itemIndex}>
                                       <NavLink
                                         to={item.path}
-                                        className="text-gray-600 hover:text-lime-600 transition-colors block py-1.5"
+                                        className="text-gray-600 hover:text-lime-600 transition-colors block py-1"
                                         onClick={closeAllDropdowns}
                                       >
                                         {item.name}
@@ -198,10 +200,10 @@ export default function AnimatedHeader() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-1"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
 
@@ -211,31 +213,31 @@ export default function AnimatedHeader() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white px-4 pb-4"
+            className="md:hidden bg-white px-3 pb-3"
           >
-            <div className="flex flex-col space-y-3">
+            <div className="flex flex-col space-y-2">
               {navLinks.map((link) => {
                 if (link.subLinks) {
                   return (
                     <div key={link.name} className="flex flex-col">
                       <button 
-                        className="py-2 text-gray-700 hover:text-primary transition-colors flex items-center justify-between"
+                        className="py-1.5 text-gray-700 hover:text-primary transition-colors flex items-center justify-between"
                         onClick={() => toggleDropdown(navLinks.indexOf(link))}
                       >
                         {link.name}
-                        {openDropdown === navLinks.indexOf(link) ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                        {openDropdown === navLinks.indexOf(link) ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
                       </button>
                       {openDropdown === navLinks.indexOf(link) && (
-                        <div className="pl-4">
+                        <div className="pl-3">
                           {link.subLinks.map((section, sectionIndex) => (
-                            <div key={sectionIndex} className="mt-4">
-                              <h4 className="font-medium text-gray-900">{section.name}</h4>
-                              <ul className="pl-4 mt-2 space-y-2">
+                            <div key={sectionIndex} className="mt-2">
+                              <h4 className="font-medium text-gray-900 text-sm">{section.name}</h4>
+                              <ul className="pl-3 mt-1 space-y-1">
                                 {section.items.map((item, itemIndex) => (
                                   <li key={itemIndex}>
                                     <NavLink
                                       to={item.path}
-                                      className="text-gray-600 hover:text-primary transition-colors"
+                                      className="text-gray-600 hover:text-primary transition-colors text-sm"
                                       onClick={closeAllDropdowns}
                                     >
                                       {item.name}
@@ -256,7 +258,7 @@ export default function AnimatedHeader() {
                     to={link.path}
                     target={link.target}
                     className={({ isActive }) =>
-                      `py-2 text-gray-700 hover:text-primary transition-colors ${isActive ? activeLinkClass : ''}`
+                      `py-1.5 text-gray-700 hover:text-primary transition-colors ${isActive ? activeLinkClass : ''}`
                     }
                     onClick={closeAllDropdowns}
                   >
@@ -269,8 +271,8 @@ export default function AnimatedHeader() {
         )}
       </motion.header>
 
-      {/* Padding for banner + header - adjusts based on screen size */}
-      <div className={isMobile ? "pt-[120px]" : "pt-[150px]"}></div>
+      {/* Padding for banner + header - ultra compact for small screens */}
+      <div className={isSmallScreen ? "pt-[100px]" : "pt-[120px]"}></div>
     </>
   );
 }
