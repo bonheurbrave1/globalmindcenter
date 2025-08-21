@@ -14,7 +14,7 @@ export default function Contact() {
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Contact <span className="text-blue-300">Global Mind Center</span>
+            Contact <span className="text-blue-600">Global Mind Center</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Get in touch with our team for course inquiries, enrollment, or any questions
@@ -33,13 +33,13 @@ export default function Contact() {
             {/* Contact Info Section */}
             <div className="bg-blue-50 p-8 md:p-12">
               <h2 className="text-2xl font-bold text-gray-900 mb-8 flex items-center">
-                <MessageSquare className="mr-3 text-blue-300" />
+                <MessageSquare className="mr-3 text-blue-600" />
                 Contact Information
               </h2>
               
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="bg-white p-3 rounded-lg shadow-sm mr-4 text-blue-300">
+                  <div className="bg-white p-3 rounded-lg shadow-sm mr-4 text-blue-600">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
@@ -51,7 +51,7 @@ export default function Contact() {
                       href="https://maps.google.com" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="inline-block mt-2 text-blue-300 hover:underline text-sm font-medium"
+                      className="inline-block mt-2 text-blue-600 hover:underline text-sm font-medium"
                     >
                       View on Google Maps →
                     </a>
@@ -59,14 +59,14 @@ export default function Contact() {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="bg-white p-3 rounded-lg shadow-sm mr-4 text-blue-300">
+                  <div className="bg-white p-3 rounded-lg shadow-sm mr-4 text-blue-600">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Email Us</h3>
                     <a 
                       href="mailto:info@globalmindcenter.com" 
-                      className="text-gray-700 hover:text-blue-300 transition-colors"
+                      className="text-gray-700 hover:text-blue-600 transition-colors"
                     >
                       info@globalmindcenter.com
                     </a>
@@ -74,14 +74,14 @@ export default function Contact() {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="bg-white p-3 rounded-lg shadow-sm mr-4 text-blue-300">
+                  <div className="bg-white p-3 rounded-lg shadow-sm mr-4 text-blue-600">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Call Us</h3>
                     <a 
                       href="tel:+250788330905" 
-                      className="text-gray-700 hover:text-blue-300 transition-colors"
+                      className="text-gray-700 hover:text-blue-600 transition-colors"
                     >
                       +250 788 330 905
                     </a>
@@ -100,7 +100,7 @@ export default function Contact() {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="bg-white p-3 rounded-lg shadow-sm mr-4 text-blue-300">
+                  <div className="bg-white p-3 rounded-lg shadow-sm mr-4 text-blue-600">
                     <Clock className="w-5 h-5" />
                   </div>
                   <div>
@@ -118,7 +118,7 @@ export default function Contact() {
                       href="https://facebook.com/globalmindcenter" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="bg-white p-3 rounded-full shadow-sm text-blue-300 hover:bg-blue-50 transition-colors"
+                      className="bg-white p-3 rounded-full shadow-sm text-blue-600 hover:bg-blue-50 transition-colors"
                       aria-label="Facebook"
                     >
                       <FaFacebook className="w-5 h-5" />
@@ -196,7 +196,7 @@ export default function Contact() {
                 <div>
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-blue-300 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center"
+                    className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center"
                   >
                     <MessageSquare className="mr-2" size={18} />
                     Send Message
@@ -238,7 +238,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-blue-300 to-blue-800 rounded-2xl p-8 md:p-12 text-center text-white shadow-xl"
+          className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-8 md:p-12 text-center text-white shadow-xl"
         >
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Start Your PMP Journey?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
@@ -247,7 +247,7 @@ export default function Contact() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="tel:+250788330905" 
-              className="bg-white text-blue-300 px-6 py-3 rounded-lg font-bold hover:bg-blue-50 transition-all shadow-lg"
+              className="bg-white text-blue-600 px-6 py-3 rounded-lg font-bold hover:bg-blue-50 transition-all shadow-lg"
             >
               Call Now
             </a>

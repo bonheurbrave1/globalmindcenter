@@ -47,10 +47,21 @@ const navLinks = [
 export default function AnimatedHeader() {
   const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const dropdownRef = useRef(null);
 
   const baseLinkClass = "text-gray-700 hover:text-primary transition-colors font-medium";
   const activeLinkClass = "border-b-2 border-black";
+
+  // Check screen size on resize
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -75,19 +86,24 @@ export default function AnimatedHeader() {
     setIsOpen(false);
   };
 
+  // Calculate header position based on screen size
+  const headerTop = isMobile ? 'top-[45px]' : 'top-[70px]';
+
   return (
     <>
-      {/* Session Banner - Modernized */}
-      <div className="fixed top-0 left-0 w-full z-50 flex justify-center bg-blue-300 to-blue-800 py-3 px-4">
-        <button className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 p-[2px] shadow-lg hover:shadow-xl transition duration-300 ease-out">
-          <span className="relative flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-gray-900 transition-colors duration-300 group-hover:bg-transparent group-hover:text-white">
-            <FiCalendar className="text-lg" />
-            Join the Global Mind Center — 25 Aug, 2025 to 23 Sep, 2025
+      {/* Session Banner - Responsive height */}
+      <div className={`fixed top-0 left-0 w-full z-50 flex justify-center bg-gradient-to-r from-blue-600 to-blue-800 ${isMobile ? 'py-1' : 'py-2'} px-4`}>
+        <button className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 p-[1px] shadow-lg hover:shadow-xl transition duration-300 ease-out max-w-full">
+          <span className="relative flex flex-col sm:flex-row items-center gap-1 sm:gap-2 rounded-full bg-white px-3 sm:px-6 py-1 sm:py-3 text-xs sm:text-sm font-semibold text-gray-900 transition-colors duration-300 group-hover:bg-transparent group-hover:text-white">
+            <FiCalendar className="text-sm sm:text-lg" />
+            <span className="text-center">
+              {isMobile ? '25 Aug - 23 Sep 2025' : 'Join the Global Mind Center — 25 Aug, 2025 to 23 Sep, 2025'}
+            </span>
             <a
               href="https://docs.google.com/forms/d/1YY29tM4r8NT3GHT5qcAuIn7jWZmn4Scxl76ysUE_CzM/edit"
-              target="__blank"
-              className="ml-2 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500 px-4 py-1 text-white text-xs font-bold shadow-sm hover:from-indigo-600 hover:to-pink-600 transition"
-              onClick={closeAllDropdowns}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-0 sm:ml-2 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500 px-3 py-1 text-white text-xs font-bold shadow-sm hover:from-indigo-600 hover:to-pink-600 transition"
             >
               Enroll Now
             </a>
@@ -95,12 +111,12 @@ export default function AnimatedHeader() {
         </button>
       </div>
 
-      {/* Header - shifted down to avoid banner overlap */}
+      {/* Header - position adjusts based on screen size */}
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ type: 'spring', stiffness: 100 }}
-        className="fixed top-[70px] left-0 w-full z-40 bg-white shadow-md"
+        className={`fixed ${headerTop} left-0 w-full z-40 bg-white shadow-md`}
       >
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           {/* Logo */}
@@ -112,9 +128,9 @@ export default function AnimatedHeader() {
             <img
               src={logo}
               alt="Global Mind Center Logo"
-              className="w-28 h-12 object-contain mr-3"
+              className={`${isMobile ? 'w-20 h-8' : 'w-28 h-12'} object-contain mr-3`}
             />
-            <span className="ml-0 text-xl font-semibold">Global Mind Center</span>
+            <span className={`${isMobile ? 'text-lg' : 'text-xl'} font-semibold`}>Global Mind Center</span>
           </NavLink>
 
           {/* Desktop Navigation */}
@@ -253,8 +269,8 @@ export default function AnimatedHeader() {
         )}
       </motion.header>
 
-      {/* Padding for banner + header */}
-      <div className="pt-[150px]"></div>
+      {/* Padding for banner + header - adjusts based on screen size */}
+      <div className={isMobile ? "pt-[120px]" : "pt-[150px]"}></div>
     </>
   );
 }

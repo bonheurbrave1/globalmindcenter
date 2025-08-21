@@ -7,7 +7,6 @@ import { FaLinkedin, FaTwitter, FaFacebook, FaGlobeAfrica, FaChalkboardTeacher, 
 import image from "../assets/homeimage.jpg";
 import pamela from "../assets/pamella.jpeg"
 import katumba from "../assets/katumba.jpeg"
-// import anelson from "../assets/anelson.jpeg"
 const trainers = [
   {
     role: "Project Management Consultant | Leadership Development Specialist | MBA Lecturer | Certified Coach",
@@ -50,22 +49,22 @@ export default function About() {
           <div className="grid lg:grid-cols-2 gap-8">
             <div className="p-8 md:p-12 lg:p-14">
               <div className="flex items-center mb-6">
-                <div className="bg-blue-100 text-blue-300 p-2 rounded-full mr-4">
+                <div className="bg-blue-100 text-blue-600 p-2 rounded-full mr-4">
                   <FaGlobeAfrica size={24} />
                 </div>
                 <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
-                  About <span className="text-blue-300">Global Mind Center</span>
+                  About <span className="text-blue-600">Global Mind Center</span>
                 </h1>
               </div>
               
               <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
                 <p className="text-lg">
-                  We are a <span className="font-semibold text-blue-300">premier professional training institution</span> dedicated to empowering individuals and organizations with world-class project management knowledge. Based in Kigali, Rwanda, we serve clients across East Africa and beyond.
+                  We are a <span className="font-semibold text-blue-600">premier professional training institution</span> dedicated to empowering individuals and organizations with world-class project management knowledge. Based in Kigali, Rwanda, we serve clients across East Africa and beyond.
                 </p>
 
                 <div className="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-500">
                   <h2 className="text-xl font-semibold text-gray-900 mb-3 flex items-center">
-                    <FaChalkboardTeacher className="mr-2 text-blue-300" />
+                    <FaChalkboardTeacher className="mr-2 text-blue-600" />
                     Our Approach
                   </h2>
                   <p>
@@ -122,7 +121,7 @@ export default function About() {
             className="text-center mb-12"
           >
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              Meet Our <span className="text-blue-300">Expert Trainer</span>
+              Meet Our <span className="text-blue-600">Expert Trainer</span>
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Learn from certified professionals with real-world experience
@@ -147,16 +146,16 @@ export default function About() {
                       alt={name}
                       className="w-40 h-40 rounded-full object-cover border-4 border-white shadow-xl"
                     />
-                    <div className="absolute -bottom-3 -right-3 bg-blue-300 text-white p-2 rounded-full">
+                    <div className="absolute -bottom-3 -right-3 bg-blue-600 text-white p-2 rounded-full">
                       <FaUserTie size={20} />
                     </div>
                   </div>
                   
                   <h3 className="text-2xl font-bold text-gray-900 mb-1">{name}</h3>
                   <p className="text-blue-700 font-medium mb-2">{degrees}</p>
-                  <p className="text-blue-300 font-semibold text-sm uppercase tracking-wider mb-6">{role}</p>
+                  <p className="text-blue-600 font-semibold text-sm uppercase tracking-wider mb-6">{role}</p>
                   
-                  <div className="flex space-x-4 text-blue-300 text-xl mb-6">
+                  <div className="flex space-x-4 text-blue-600 text-xl mb-6">
                     {social.linkedin && (
                       <a href={social.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-blue-800 transition transform hover:scale-110">
                         <FaLinkedin />
