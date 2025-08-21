@@ -51,7 +51,7 @@ export default function PricingTable() {
         >
           <div className="p-8">
             <div className="flex items-center mb-6">
-              <div className="p-3 rounded-full bg-blue-50 text-blue-600 mr-4">
+              <div className="p-3 rounded-full bg-blue-50 text-blue-950 mr-4">
                 <Zap size={24} />
               </div>
               <h3 className="text-2xl font-bold text-gray-800">PMP Certification</h3>
@@ -78,7 +78,7 @@ export default function PricingTable() {
             </ul>
 
             <Link to="/enroll">
-              <button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all transform hover:-translate-y-1">
+              <button className="w-full bg-gradient-to-r from-blue-500 to-blue-950 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-950 hover:to-blue-700 transition-all transform hover:-translate-y-1">
                 Enroll Now
               </button>
             </Link>
@@ -98,7 +98,7 @@ export default function PricingTable() {
             {pricing.paymentOptions.map((option, index) => (
               <div key={index} className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
                 <div className="flex items-center">
-                  <div className="bg-blue-100 text-blue-600 p-2 rounded-full mr-3">
+                  <div className="bg-blue-100 text-blue-950 p-2 rounded-full mr-3">
                     <Award size={18} />
                   </div>
                   <span className="font-medium">{option}</span>

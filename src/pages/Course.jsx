@@ -20,7 +20,7 @@ export default function Course() {
           alt="PMP Certification"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-green-900/45 to-blue-600/45  flex items-center justify-center">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-900/45 to-blue-950/45  flex items-center justify-center">
           <div className="text-center px-4">
             <motion.h1
               initial={{ opacity: 0, y: -20 }}
@@ -45,7 +45,7 @@ export default function Course() {
               className="mt-8 flex flex-col sm:flex-row gap-4 justify-center"
             >
               <a href="https://docs.google.com/forms/d/1YY29tM4r8NT3GHT5qcAuIn7jWZmn4Scxl76ysUE_CzM/edit" target="__blank">
-              <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-bold hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl">
+              <button className="bg-white text-blue-950 px-6 py-3 rounded-lg font-bold hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl">
                 Enroll Now
               </button>
               </a>
@@ -74,7 +74,7 @@ export default function Course() {
               transition={{ delay: index * 0.1 }}
               className="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center hover:shadow-lg transition-all"
             >
-              <div className="text-blue-600 mb-4 flex justify-center">{item.icon}</div>
+              <div className="text-blue-950 mb-4 flex justify-center">{item.icon}</div>
               <h3 className="text-xl font-bold mb-2 text-gray-900">{item.title}</h3>
               <p className="text-gray-600">{item.text}</p>
             </motion.div>
@@ -93,14 +93,14 @@ export default function Course() {
             <div className="grid lg:grid-cols-2 gap-8">
               <div className="p-8 md:p-10">
                 <div className="flex items-center mb-6">
-                  <div className="bg-blue-100 text-blue-600 p-2 rounded-full mr-4">
+                  <div className="bg-blue-100 text-blue-950 p-2 rounded-full mr-4">
                     <FaCheckCircle className="text-xl" />
                   </div>
                   <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Course Description</h2>
                 </div>
                 <div className="prose prose-lg text-gray-700 space-y-4">
                   <p>
-                    Our <span className="font-semibold text-blue-600">PMP certification course</span> provides comprehensive training based on the latest PMBOK® Guide, equipping you with the skills to successfully manage projects across industries.
+                    Our <span className="font-semibold text-blue-950">PMP certification course</span> provides comprehensive training based on the latest PMBOK® Guide, equipping you with the skills to successfully manage projects across industries.
                   </p>
                   <p>
                     Through interactive sessions and real-world case studies, you'll master the ten knowledge areas of project management including scope, schedule, cost, quality, and risk management.
@@ -139,7 +139,7 @@ export default function Course() {
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl shadow-xl overflow-hidden mb-16 text-white"
+            className="bg-gradient-to-r from-blue-950 to-blue-800 rounded-2xl shadow-xl overflow-hidden mb-16 text-white"
           >
             <div className="grid lg:grid-cols-2 gap-8">
               <div className="p-8 md:p-10 order-last lg:order-first">
@@ -199,7 +199,7 @@ export default function Course() {
             >
               <div className="p-8 md:p-10">
                 <div className="flex items-center mb-6">
-                  <div className="bg-blue-100 text-blue-600 p-2 rounded-full mr-4">
+                  <div className="bg-blue-100 text-blue-950 p-2 rounded-full mr-4">
                     <FaUserTie className="text-xl" />
                   </div>
                   <h2 className="text-2xl font-bold text-gray-900">Who Should Attend?</h2>
@@ -235,14 +235,14 @@ export default function Course() {
             >
               <div className="p-8 md:p-10">
                 <div className="flex items-center mb-6">
-                  <div className="bg-blue-100 text-blue-600 p-2 rounded-full mr-4">
+                  <div className="bg-blue-100 text-blue-950 p-2 rounded-full mr-4">
                     <FaAward className="text-xl" />
                   </div>
                   <h2 className="text-2xl font-bold text-gray-900">Certification Process</h2>
                 </div>
                 <div className="space-y-6">
                   <div className="flex">
-                    <div className="bg-blue-100 text-blue-600 rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">
+                    <div className="bg-blue-100 text-blue-950 rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">
                       1
                     </div>
                     <div>
@@ -251,7 +251,7 @@ export default function Course() {
                     </div>
                   </div>
                   <div className="flex">
-                    <div className="bg-blue-100 text-blue-600 rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">
+                    <div className="bg-blue-100 text-blue-950 rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">
                       2
                     </div>
                     <div>
@@ -260,7 +260,7 @@ export default function Course() {
                     </div>
                   </div>
                   <div className="flex">
-                    <div className="bg-blue-100 text-blue-600 rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">
+                    <div className="bg-blue-100 text-blue-950 rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">
                       3
                     </div>
                     <div>
@@ -269,7 +269,7 @@ export default function Course() {
                     </div>
                   </div>
                   <div className="flex">
-                    <div className="bg-blue-100 text-blue-600 rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">
+                    <div className="bg-blue-100 text-blue-950 rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">
                       4
                     </div>
                     <div>
@@ -287,7 +287,7 @@ export default function Course() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-8 text-center text-white shadow-xl"
+            className="bg-gradient-to-r from-blue-950 to-blue-800 rounded-2xl p-8 text-center text-white shadow-xl"
           >
             <div className="max-w-3xl mx-auto">
               <div className="flex items-center justify-center mb-4">
@@ -298,7 +298,7 @@ export default function Course() {
                 Limited seats available for our upcoming cohort. Enroll today to secure your spot!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 transition-all shadow-lg">
+                <button className="bg-white text-blue-950 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 transition-all shadow-lg">
                   Enroll Now
                 </button>
                 <Link to={"/contact"}>
