@@ -3,6 +3,7 @@ import MissionVisionSection from '../components/MissionVisionSection';
 import CourseHighlights from './Course';
 import LearningOutcomes from '../components/LearningOutcomes';
 import PricingTable from '../components/PricingTable';
+import PartnershipCarousel from '../components/PartnershipCarousel';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <CourseHighlights />
       <LearningOutcomes />
       <PricingTable />
+      <PartnershipCarousel />
     </div>
   );
 }
