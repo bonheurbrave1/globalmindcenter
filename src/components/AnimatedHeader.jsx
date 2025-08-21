@@ -78,7 +78,7 @@ export default function AnimatedHeader() {
   return (
     <>
       {/* Session Banner - Modernized */}
-      <div className="fixed top-0 left-0 w-full z-50 flex justify-center bg-gradient-to-r from-blue-600 to-blue-800 py-3 px-4">
+      <div className="fixed top-0 left-0 w-full z-50 flex justify-center bg-blue-300 to-blue-800 py-3 px-4">
         <button className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 p-[2px] shadow-lg hover:shadow-xl transition duration-300 ease-out">
           <span className="relative flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-gray-900 transition-colors duration-300 group-hover:bg-transparent group-hover:text-white">
             <FiCalendar className="text-lg" />

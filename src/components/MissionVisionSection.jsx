@@ -32,7 +32,7 @@ export default function MissionVisionSection() {
             viewport={{ once: true }}
             className="bg-gradient-to-b from-white to-blue-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300"
           >
-            <div className="text-blue-600 mb-4">
+            <div className="text-blue-300 mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
               </svg>

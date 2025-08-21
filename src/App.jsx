@@ -15,6 +15,22 @@ import NotFound from './pages/NotFound';
 import pmilogo from "./assets/pmilogo.png"
 import { TiTick } from "react-icons/ti";
 
+
+
+
+
+// import ProjectFinance from './pages/ProjectFinance';
+// import LeadershipTraining from './pages/LeadershipTraining';
+// import ProfessionalCertification from './pages/ProfessionalCertification';
+// import PMPCertification from './pages/PMPCertification';
+// import PBACertification from './pages/PBACertification';
+// import ACPCertification from './pages/ACPCertification';
+// import RiskManagement from './pages/RiskManagement';
+// import OnJobTraining from './pages/OnJobTraining';
+// import MicrosoftProject from './pages/MicrosoftProject';
+// import ProjectManagementFundamentals from './pages/ProjectManagementFundamentals';
+// import TeamBuilding from './pages/TeamBuilding';
+
 function App() {
   return (
     <Router>
@@ -32,6 +48,20 @@ function App() {
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/refund" element={<Refund />} />
               <Route path="*" element={<NotFound />} />
+              {/* Service Pages */}
+            {/* <Route path="/services/customized-training" element={<CustomizedTraining />} />
+            <Route path="/services/project-finance" element={<ProjectFinance />} />
+            <Route path="/services/leadership-training" element={<LeadershipTraining />} />
+            <Route path="/services/data-analysis" element={<DataAnalysis />} />
+            <Route path="/services/professional-certification" element={<ProfessionalCertification />} />
+            <Route path="/services/pmp-certification" element={<PMPCertification />} />
+            <Route path="/services/pba-certification" element={<PBACertification />} />
+            <Route path="/services/acp-certification" element={<ACPCertification />} />
+            <Route path="/services/risk-management" element={<RiskManagement />} />
+            <Route path="/services/on-job-training" element={<OnJobTraining />} />
+            <Route path="/services/microsoft-project" element={<MicrosoftProject />} />
+            <Route path="/services/project-management-fundamentals" element={<ProjectManagementFundamentals />} />
+            <Route path="/services/team-building" element={<TeamBuilding />} /> */}
             </Routes>
           </AnimatePresence>
         </main>

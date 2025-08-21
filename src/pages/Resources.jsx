@@ -54,7 +54,7 @@ export default function Resources() {
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            PMP® <span className="text-blue-600">Resources</span>
+            PMP® <span className="text-blue-300">Resources</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Essential materials to accelerate your PMP certification journey
@@ -81,7 +81,7 @@ export default function Resources() {
               >
                 <div className="p-6 h-full flex flex-col">
                   <div className="flex items-center mb-4">
-                    <div className="bg-blue-100 text-blue-600 p-3 rounded-lg mr-4">
+                    <div className="bg-blue-100 text-blue-300 p-3 rounded-lg mr-4">
                       {resource.icon}
                     </div>
                     <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">
@@ -102,7 +102,7 @@ export default function Resources() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-8 md:p-10 text-white shadow-xl mb-16"
+          className="bg-gradient-to-r from-blue-300 to-blue-800 rounded-2xl p-8 md:p-10 text-white shadow-xl mb-16"
         >
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">Unlock Premium Resources</h2>
@@ -129,7 +129,7 @@ export default function Resources() {
               </div>
               <div className="flex flex-col justify-center">
                 <a href="https://docs.google.com/forms/d/1YY29tM4r8NT3GHT5qcAuIn7jWZmn4Scxl76ysUE_CzM/edit">
-                <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-bold hover:bg-blue-50 transition-all shadow-lg">
+                <button className="bg-white text-blue-300 px-6 py-3 rounded-lg font-bold hover:bg-blue-50 transition-all shadow-lg">
                   Enroll for Full Access
                 </button>
                 </a>
@@ -160,7 +160,7 @@ export default function Resources() {
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
             Contact our support team for personalized recommendations based on your learning needs.
           </p>
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition-all shadow-md">
+          <button className="bg-blue-300 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition-all shadow-md">
             <a href="/contact">Contact Support</a>
           </button>
         </motion.div>
