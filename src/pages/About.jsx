@@ -13,9 +13,9 @@ const trainers = [
     name: "James Katumba",
     degrees: "MBA®",
     social: {
-      linkedin: "https://linkedin.com/in/robertrunazi",
-      twitter: "https://twitter.com/robertrunazi",
-      facebook: "https://facebook.com/robertrunazi",
+      linkedin: "https://ug.linkedin.com/in/katumba-james-832a6061",
+      twitter: "https://twitter.com/jameskatumba3",
+      facebook: "https://www.facebook.com/james.katumba.940/",
     },
     bio: `James Katumba is a seasoned Project Management Consultant, Leadership Development Specialist, and John C. Maxwell Certified Coach with over five years of experience in training and consultancy. He supports organizations across Uganda and Kigali in capacity building, leadership development, and strategic execution. James has facilitated PMP® and CAPM® prep programs with PMI ATPs like MAT Abacus, Agile Masters, and Crosslinks, empowering hundreds of learners. As a lecturer in Heriot-Watt University’s MBA program, he guides students through project governance and stakeholder engagement. His coaching, grounded in trust and accountability, helps teams unlock potential and align with purpose. James brings clarity, strategy, and practical tools to every engagement`,
     image: katumba,
@@ -25,11 +25,11 @@ const trainers = [
     name: "Pamela Nabisaalu",
     degrees: "MBA®, CSM®,",
     social: {
-      linkedin: "https://linkedin.com/in/robertrunazi",
-      twitter: "https://twitter.com/robertrunazi",
-      facebook: "https://facebook.com/robertrunazi",
+      linkedin: "https://ug.linkedin.com/in/nabisaalu-pamela-38504a57",
+      twitter: "https://twitter.com/NabisaaluPamela",
+      facebook: "https://twitter.com/NabisaaluPamela",
     },
-    bio: `Pamela Nabisaalu is a Uganda-based Project Management Consultant with over five years of experience guiding project teams across sectors. He has managed and supported the delivery of 60+ high-impact projects worth over $1 billion, navigating complex stakeholder ecosystems with strategic coordination and adaptive leadership. James is also a Change Management Expert, known for driving organizational transformation and aligning teams with strategic goals. He holds a PMP, CSM, and MBA, enabling him to operate effectively in both agile and traditional project environments. As co-founder of Ascend Professionals Limited, he leads efforts in project training and delivery. His work focuses on empowering individuals and organizations with practical, results-driven solutions`,
+    bio: `Pamela Nabisaalu is a Uganda-based Project Management Consultant with over five years of experience guiding project teams across sectors. He has managed and supported the delivery of 60+ high-impact projects worth over $1 billion, navigating complex stakeholder ecosystems with strategic coordination and adaptive leadership. James is also a Change Management Expert, known for driving organizational transformation and aligning teams with strategic goals. He holds a PMP, CSM, and MBA, enabling her to operate effectively in both agile and traditional project environments. As co-founder of Ascend Professionals Limited, he leads efforts in project training and delivery. Her work focuses on empowering individuals and organizations with practical, results-driven solutions`,
     image: pamela,
   },
 ];
