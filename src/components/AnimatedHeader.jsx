@@ -131,7 +131,7 @@ export default function AnimatedHeader() {
               className={`${isSmallScreen ? 'w-16 h-6' : 'w-20 h-8'} object-contain mr-2`}
             />
             <span className={`${isSmallScreen ? 'text-sm' : 'text-lg'} font-semibold`}>
-              {isSmallScreen ? 'GMC' : 'Global Mind Center'}
+               Global Mind Center
             </span>
           </NavLink>
 
