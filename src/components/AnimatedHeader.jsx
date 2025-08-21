@@ -98,7 +98,7 @@ export default function AnimatedHeader() {
           <span className="relative flex items-center gap-1 rounded-full bg-white px-2 py-1 text-xs font-semibold text-gray-900 transition-colors duration-300 group-hover:bg-transparent group-hover:text-white">
             <FiCalendar className="text-xs" />
             <span className="text-center">
-              {isSmallScreen ? '1st Sept - 23 Sept' : '1st Sept - 23 Sep 2025'}
+              {isSmallScreen ? '1st Sept - 13 Sept' : '1st Sept - 13 Sep 2025'}
             </span>
             <a
               href="https://docs.google.com/forms/d/1YY29tM4r8NT3GHT5qcAuIn7jWZmn4Scxl76ysUE_CzM/edit"
