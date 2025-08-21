@@ -292,7 +292,7 @@ export default function Course() {
             <div className="max-w-3xl mx-auto">
               <div className="flex items-center justify-center mb-4">
                 <FaCalendarAlt className="text-2xl mr-3" />
-                <h2 className="text-2xl md:text-3xl font-bold">Next Session Starts August 25, 2025</h2>
+                <h2 className="text-2xl md:text-3xl font-bold">Next Session Starts September 1st, 2025</h2>
               </div>
               <p className="text-xl mb-6 text-blue-100">
                 Limited seats available for our upcoming cohort. Enroll today to secure your spot!
