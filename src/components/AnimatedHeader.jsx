@@ -139,7 +139,7 @@ export default function AnimatedHeader() {
             <img
               src={logo}
               alt="Global Mind Center Logo"
-              className={`${isSmallScreen ? 'w-16 h-6' : 'w-20 h-8'} object-contain mr-2`}
+              className={`${isSmallScreen ? 'w-20 h-8' : 'w-28 h-20'} object-contain mr-2`}
             />
             <span className={`${isSmallScreen ? 'text-sm' : 'text-lg'} font-semibold`}>
                Global Mind Center

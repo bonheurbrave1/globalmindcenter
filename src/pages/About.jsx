@@ -11,7 +11,7 @@ const trainers = [
   {
     role: "Project Management Consultant | Leadership Development Specialist | MBA Lecturer | Certified Coach",
     name: "James Katumba",
-    degrees: "MSc. PMP®, PBA®, ACP®,",
+    degrees: "MBA®",
     social: {
       linkedin: "https://linkedin.com/in/robertrunazi",
       twitter: "https://twitter.com/robertrunazi",
@@ -23,7 +23,7 @@ const trainers = [
   {
     role: "facilitators for the September Cohort. ",
     name: "Pamela Nabisaalu",
-    degrees: "MSc. PMP®, PBA®, ACP®,",
+    degrees: "MBA®, CSM®,",
     social: {
       linkedin: "https://linkedin.com/in/robertrunazi",
       twitter: "https://twitter.com/robertrunazi",
