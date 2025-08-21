@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Menu, X, ChevronDown, ChevronUp } from 'react-feather';
 import { FiCalendar } from 'react-icons/fi';
+import { FaWhatsapp } from 'react-icons/fa';
 import logo from "../assets/logo.png";
 
 const navLinks = [
@@ -109,6 +110,16 @@ export default function AnimatedHeader() {
             </a>
           </span>
         </button>
+        {/* WhatsApp Floating Button */}
+      <a
+        href="https://wa.me/250788330905"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 left-6 animate-bounce z-50 w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
+        aria-label="Chat on WhatsApp"
+      >
+        <FaWhatsapp className="text-2xl" />
+      </a>
       </div>
 
       {/* Header - position adjusts based on screen size */}
@@ -270,6 +281,8 @@ export default function AnimatedHeader() {
           </motion.div>
         )}
       </motion.header>
+
+      
 
       {/* Padding for banner + header - ultra compact for small screens */}
       <div className={isSmallScreen ? "pt-[100px]" : "pt-[120px]"}></div>
