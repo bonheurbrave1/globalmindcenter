@@ -16,7 +16,7 @@ body {
 }
 
 .backgroundSection {
-  background-image: linear-gradient(rgba(38, 138, 138, 0.4)), url('./assets/homeimage.jpg');
+  background-image: linear-gradient(rgba(13, 53, 53, 0.765)), url('./assets/homeimage.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

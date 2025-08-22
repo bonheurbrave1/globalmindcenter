@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+
+// Import all partner logos
 import afr from "../assets/partners/afr.png";
 import agaciro from "../assets/partners/agaciro.png";
 import bdf from "../assets/partners/bdf.png";
@@ -21,38 +23,50 @@ import rura from "../assets/partners/rura.png";
 import smartafrica from "../assets/partners/smartafrica.png";
 import xtrade from "../assets/partners/xtrade.png";
 import zigama from "../assets/partners/zigama.jpg";
+import eu from "../assets/partners/eu.png"
+import ictchamber from "../assets/partners/ictchamber.png"
+import unwome from "../assets/partners/unwome.png"
+import chai from "../assets/partners/chai.png"
+import giz from "../assets/partners/giz.jpeg"
+
 const PartnershipCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  // Array of partner logo images (replace with your actual images)
+  // Array of partner logo images
   const partnerLogos = [
-    afr,
-    agaciro,
-    bdf,
-    bk,
-    bpr,
-    cimerwa,
-    cogebanque,
-    crystal,
-    equity,
-    hope,
-    im,
-    mastercard,
-    mod,
-    mtn,
-    ngali,
-    npd,
-    rba,
-    risa,
-    rura,
-    smartafrica,
-    xtrade,
-    zigama,
+
+    { src: giz, alt: "African Development Bank" },
+    { src: eu, alt: "African Development Bank" },
+    { src: unwome, alt: "African Development Bank" },
+    { src: ictchamber, alt: "African Development Bank" },
+    { src: chai, alt: "African Development Bank" },
+    { src: agaciro, alt: "Agaciro Development Fund" },
+    { src: bdf, alt: "Botswana Development Fund" },
+    { src: bk, alt: "Bank of Kigali" },
+    { src: bpr, alt: "Banque Populaire du Rwanda" },
+    { src: cimerwa, alt: "Cimerwa Cement" },
+    { src: cogebanque, alt: "Cogebanque" },
+    { src: crystal, alt: "Crystal Ventures Ltd" },
+    { src: equity, alt: "Equity Bank" },
+    { src: hope, alt: "Hope Enterprises" },
+    { src: im, alt: "Investment Management" },
+    { src: mastercard, alt: "Mastercard" },
+    { src: mod, alt: "Ministry of Defense" },
+    { src: mtn, alt: "MTN Rwanda" },
+    { src: ngali, alt: "Ngali Holdings" },
+    { src: npd, alt: "National Planning Directorate" },
+    { src: rba, alt: "Rwanda Biomedical Center" },
+    { src: risa, alt: "Rwanda Information Society Authority" },
+    { src: rura, alt: "Rwanda Utilities Regulatory Authority" },
+    { src: smartafrica, alt: "Smart Africa Alliance" },
+    { src: xtrade, alt: "XTrade Africa" },
+    { src: zigama, alt: "Zigama Credit and Savings Bank" }
   ];
 
-  // Number of slides needed (showing 6 partners per slide)
-  const totalSlides = Math.ceil(partnerLogos.length / 6);
+  // Number of slides needed (showing 3 partners per slide for bigger logos)
+  const partnersPerSlide = 3;
+  const totalSlides = Math.ceil(partnerLogos.length / partnersPerSlide);
 
   // Auto-advance the carousel
   useEffect(() => {
@@ -84,10 +98,10 @@ const PartnershipCarousel = () => {
     setTimeout(() => setIsAutoPlaying(true), 8000);
   };
 
-  // Split partners into groups of 6 for each slide
+  // Split partners into groups for each slide
   const partnerGroups = [];
-  for (let i = 0; i < partnerLogos.length; i += 6) {
-    partnerGroups.push(partnerLogos.slice(i, i + 6));
+  for (let i = 0; i < partnerLogos.length; i += partnersPerSlide) {
+    partnerGroups.push(partnerLogos.slice(i, i + partnersPerSlide));
   }
 
   return (
@@ -114,7 +128,7 @@ const PartnershipCarousel = () => {
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6 text-blue-600"
               fill="none"
-              viewBox="0 极速赛车开奖直播 0 24 24"
+              viewBox="0 0 24 24"
               stroke="currentColor"
             >
               <path
@@ -127,7 +141,7 @@ const PartnershipCarousel = () => {
           </button>
 
           <button
-            onClick极速赛车开奖直播={goToNext}
+            onClick={goToNext}
             className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 z-10 bg-white rounded-full p-3 shadow-lg hover:bg-blue-50 transition-colors focus:outline-none"
             aria-label="Next partners"
           >
@@ -155,16 +169,16 @@ const PartnershipCarousel = () => {
             >
               {partnerGroups.map((group, groupIndex) => (
                 <div key={groupIndex} className="w-full flex-shrink-0 p-8">
-                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-                    {group.map((logo, index) => (
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 h-64">
+                    {group.map((partner, index) => (
                       <div
                         key={index}
-                        className="flex items-center justify-center p-4 bg-gray-50 rounded-lg hover:shadow-md transition-shadow"
+                        className="flex items-center justify-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105 h-full"
                       >
                         <img
-                          src={logo}
-                          alt={`Partner institution ${groupIndex * 6 + index + 1}`}
-                          className="max-h-16 max-w-full object-contain filter grayscale-0 hover:grayscale transition-all duration-300"
+                          src={partner.src}
+                          alt={partner.alt}
+                          className="max-h-32 max-w-full object-contain"
                         />
                       </div>
                     ))}
@@ -194,7 +208,7 @@ const PartnershipCarousel = () => {
           <p className="text-gray-600 mb-6">
             Interested in our training programs for your institution?
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition-colors">
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-lg transition-colors shadow-md hover:shadow-lg">
             Contact Us
           </button>
         </div>
