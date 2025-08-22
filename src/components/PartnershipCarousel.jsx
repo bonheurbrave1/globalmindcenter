@@ -164,7 +164,7 @@ const PartnershipCarousel = () => {
                         <img
                           src={logo}
                           alt={`Partner institution ${groupIndex * 6 + index + 1}`}
-                          className="max-h-12 max-w-full object-contain filter grayscale-0 hover:grayscale transition-all duration-300"
+                          className="max-h-16 max-w-full object-contain filter grayscale-0 hover:grayscale transition-all duration-300"
                         />
                       </div>
                     ))}

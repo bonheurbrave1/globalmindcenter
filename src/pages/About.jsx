@@ -1,17 +1,24 @@
-import { motion } from 'framer-motion';
-import MissionVisionSection from '../components/MissionVisionSection';
-import TestimonialSlider from '../components/TestimonialSlider';
-import pmilogo from '../assets/pmilogo.png';
-import { TiTick } from 'react-icons/ti';
-import { FaLinkedin, FaTwitter, FaFacebook, FaGlobeAfrica, FaChalkboardTeacher, FaUserTie } from 'react-icons/fa';
+import { motion } from "framer-motion";
+import MissionVisionSection from "../components/MissionVisionSection";
+import TestimonialSlider from "../components/TestimonialSlider";
+import pmilogo from "../assets/pmilogo.png";
+import { TiTick } from "react-icons/ti";
+import {
+  FaLinkedin,
+  FaTwitter,
+  FaFacebook,
+  FaGlobeAfrica,
+  FaChalkboardTeacher,
+  FaUserTie,
+} from "react-icons/fa";
 import image from "../assets/homeimage.jpg";
-import pamela from "../assets/pamella.jpeg"
-import katumba from "../assets/katumba.jpeg"
+import pamela from "../assets/pamella.jpeg";
+import katumba from "../assets/katumba.jpeg";
 const trainers = [
   {
     role: "Project Management Consultant | Leadership Development Specialist | MBA Lecturer | Certified Coach",
     name: "James Katumba",
-    degrees: "MBA®",
+    degrees: "MBA®|PMP®|CAPM®|PMP|PMI®ATP|DASM|TPMA|CAPM",
     social: {
       linkedin: "https://ug.linkedin.com/in/katumba-james-832a6061",
       twitter: "https://twitter.com/jameskatumba3",
@@ -23,9 +30,9 @@ const trainers = [
   {
     role: "facilitators for the September Cohort. ",
     name: "Pamela Nabisaalu",
-    degrees: "MBA®, CSM®,",
+    degrees: "MBA®|CSM®,",
     social: {
-      linkedin: "https://ug.linkedin.com/in/nabisaalu-pamela-38504a57",
+      linkedin: "https://www.linkedin.com/in/pamelanabisaalu/",
       twitter: "https://twitter.com/NabisaaluPamela",
       facebook: "https://twitter.com/NabisaaluPamela",
     },
@@ -38,7 +45,6 @@ export default function About() {
   return (
     <div className="py-12 bg-gradient-to-b from-gray-50 to-white min-h-screen">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-
         {/* Hero About Section */}
         <motion.section
           initial={{ opacity: 0 }}
@@ -53,13 +59,26 @@ export default function About() {
                   <FaGlobeAfrica size={24} />
                 </div>
                 <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
-                  About <span className="text-blue-950">Global Mind Center</span>
+                  About{" "}
+                  <span className="text-blue-950">Global Mind Center</span>
                 </h1>
               </div>
-              
+
               <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
                 <p className="text-lg">
-                  We are a <span className="font-semibold text-blue-950">premier professional training institution</span> dedicated to empowering individuals and organizations with world-class project management knowledge. Based in Kigali, Rwanda, we serve clients across East Africa and beyond.
+                  Global Mind Center is at the forefront of professional
+                  training in Africa. We are a leading Rwandan consultancy and
+                  training firm dedicated to empowering organizations and
+                  individuals across diverse sectors through high-quality
+                  capacity-building solutions. With a mission to equip
+                  professionals and organizations with world-class project
+                  management knowledge, skills, and certifications, we enable
+                  them to deliver impactful results and drive sustainable
+                  growth. We are committed to delivering tailored professional
+                  training and development programs that inspire lifelong
+                  learning, cultivate talent, and uphold exceptional
+                  quality—while continuously adapting to client needs and
+                  fostering ongoing improvement.
                 </p>
 
                 <div className="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-500">
@@ -68,7 +87,13 @@ export default function About() {
                     Our Approach
                   </h2>
                   <p>
-                    We combine <span className="font-medium">theoretical knowledge</span> with <span className="font-medium">practical application</span>, ensuring immediate implementation in professional environments. Our instructors are seasoned professionals with extensive real-world experience.
+                    We combine{" "}
+                    <span className="font-medium">theoretical knowledge</span>{" "}
+                    with{" "}
+                    <span className="font-medium">practical application</span>,
+                    ensuring immediate implementation in professional
+                    environments. Our instructors are seasoned professionals
+                    with extensive real-world experience.
                   </p>
                 </div>
               </div>
@@ -150,37 +175,62 @@ export default function About() {
                       <FaUserTie size={20} />
                     </div>
                   </div>
-                  
-                  <h3 className="text-2xl font-bold text-gray-900 mb-1">{name}</h3>
+
+                  <h3 className="text-2xl font-bold text-gray-900 mb-1">
+                    {name}
+                  </h3>
                   <p className="text-blue-700 font-medium mb-2">{degrees}</p>
-                  <p className="text-blue-950 font-semibold text-sm uppercase tracking-wider mb-6">{role}</p>
-                  
+                  <p className="text-blue-950 font-semibold text-sm uppercase tracking-wider mb-6">
+                    {role}
+                  </p>
+
                   <div className="flex space-x-4 text-blue-950 text-xl mb-6">
                     {social.linkedin && (
-                      <a href={social.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-blue-800 transition transform hover:scale-110">
+                      <a
+                        href={social.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-blue-800 transition transform hover:scale-110"
+                      >
                         <FaLinkedin />
                       </a>
                     )}
                     {social.twitter && (
-                      <a href={social.twitter} target="_blank" rel="noopener noreferrer" className="hover:text-blue-800 transition transform hover:scale-110">
+                      <a
+                        href={social.twitter}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-blue-800 transition transform hover:scale-110"
+                      >
                         <FaTwitter />
                       </a>
                     )}
                     {social.facebook && (
-                      <a href={social.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-blue-800 transition transform hover:scale-110">
+                      <a
+                        href={social.facebook}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-blue-800 transition transform hover:scale-110"
+                      >
                         <FaFacebook />
                       </a>
                     )}
                   </div>
-                  
+
                   {/* PMI Badge - Mobile First */}
                   <div className="lg:hidden bg-white p-4 rounded-xl shadow-sm border border-gray-200 flex flex-col items-center w-full max-w-xs">
-                    <img src={pmilogo} alt="PMI Logo" className="w-14 h-auto mb-2" />
+                    <img
+                      src={pmilogo}
+                      alt="PMI Logo"
+                      className="w-14 h-auto mb-2"
+                    />
                     <div className="flex items-center text-sm text-green-600 mb-1 font-medium">
                       <span>Verified</span>
                       <TiTick className="ml-1 bg-green-600 rounded text-white" />
                     </div>
-                    <p className="text-xs text-gray-500 mb-2">Authorized Training Partner</p>
+                    <p className="text-xs text-gray-500 mb-2">
+                      Authorized Training Partner
+                    </p>
                     <button className="text-xs px-3 py-1 rounded bg-green-600 text-white font-semibold hover:bg-green-700 transition">
                       Verify Badge
                     </button>
@@ -191,24 +241,39 @@ export default function About() {
                 <div className="lg:col-span-2 p-8 relative">
                   {/* PMI Badge - Desktop */}
                   <div className="hidden lg:block absolute top-8 right-8 bg-white p-4 rounded-xl shadow-sm border border-gray-200 flex flex-col items-center w-32">
-                    <img src={pmilogo} alt="PMI Logo" className="w-12 h-auto mb-2" />
+                    <img
+                      src={pmilogo}
+                      alt="PMI Logo"
+                      className="w-12 h-auto mb-2"
+                    />
                     <div className="flex items-center text-xs text-green-600 mb-1 font-medium">
                       <span>Verified</span>
                       <TiTick className="ml-1 bg-green-600 rounded text-white px-0.5" />
                     </div>
-                    <p className="text-[10px] text-gray-500 mb-2 text-center">Authorized Training Partner</p>
+                    <p className="text-[10px] text-gray-500 mb-2 text-center">
+                      Authorized Training Partner
+                    </p>
                     <button className="text-xs px-2 py-1 rounded bg-green-600 text-white font-semibold hover:bg-green-700 transition">
                       Verify
                     </button>
                   </div>
 
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Professional Profile</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                    Professional Profile
+                  </h3>
                   <p className="text-gray-700 leading-relaxed mb-6">{bio}</p>
-                  
+
                   <div className="bg-blue-50 rounded-lg p-6 border border-blue-100">
-                    <h4 className="font-medium text-blue-800 mb-3">Key Expertise:</h4>
+                    <h4 className="font-medium text-blue-800 mb-3">
+                      Key Expertise:
+                    </h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                      {['Project Management', 'Business Analysis', 'Financial Strategy', 'Corporate Training'].map((skill, i) => (
+                      {[
+                        "Project Management",
+                        "Business Analysis",
+                        "Financial Strategy",
+                        "Corporate Training",
+                      ].map((skill, i) => (
                         <div key={i} className="flex items-start">
                           <TiTick className="text-green-500 mt-1 mr-2 flex-shrink-0" />
                           <span>{skill}</span>
