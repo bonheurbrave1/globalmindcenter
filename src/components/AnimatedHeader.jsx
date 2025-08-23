@@ -93,7 +93,7 @@ export default function AnimatedHeader() {
   return (
     <>
       {/* Session Banner - Ultra compact for small screens */}
-      <div className={`fixed top-0 left-0 w-full z-50 flex justify-center bg-gradient-to-r from-blue-950 to-blue-800 ${isSmallScreen ? 'py-0' : 'py-1'} px-2`}>
+      <div className={`fixed top-0 left-0 w-full py-3 z-50 flex justify-center bg-gradient-to-r from-blue-950 to-blue-800 ${isSmallScreen ? 'py-0' : 'py-1'} px-2`}>
         <button className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 p-[1px] shadow-lg hover:shadow-xl transition duration-300 ease-out max-w-full">
           <span className="relative flex items-center gap-1 rounded-full bg-white px-2 py-1 text-xs font-semibold text-gray-900 transition-colors duration-300 group-hover:bg-transparent group-hover:text-white">
             <FiCalendar className="text-xs" />
