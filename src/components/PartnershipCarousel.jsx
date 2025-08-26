@@ -64,8 +64,8 @@ const PartnershipCarousel = () => {
     { src: zigama, alt: "Zigama Credit and Savings Bank" }
   ];
 
-  // Number of slides needed (showing 3 partners per slide for bigger logos)
-  const partnersPerSlide = 3;
+  // Number of slides needed (showing 6 partners per slide for smaller logos)
+  const partnersPerSlide = 6;
   const totalSlides = Math.ceil(partnerLogos.length / partnersPerSlide);
 
   // Auto-advance the carousel
@@ -168,17 +168,17 @@ const PartnershipCarousel = () => {
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
               {partnerGroups.map((group, groupIndex) => (
-                <div key={groupIndex} className="w-full flex-shrink-0 p-8">
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 h-64">
+                <div key={groupIndex} className="w-full flex-shrink-0 p-6">
+                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
                     {group.map((partner, index) => (
                       <div
                         key={index}
-                        className="flex items-center justify-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105 h-full"
+                        className="flex items-center justify-center p-4 bg-gray-50 rounded-lg hover:shadow-md transition-all duration-300 hover:scale-105 h-24"
                       >
                         <img
                           src={partner.src}
                           alt={partner.alt}
-                          className="max-h-32 max-w-full object-contain"
+                          className="max-h-16 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
                         />
                       </div>
                     ))}
