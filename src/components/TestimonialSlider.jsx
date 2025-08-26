@@ -29,7 +29,7 @@ const testimonials = [
   {
     id:4,
     name:"Aurolie Ineza",
-    role: "Project Manager - ICT chamber"
+    role: "Project Manager - ICT chamber",
     content : "My PMP journey with Global Mind Center was transformative. They turned complex concepts into actionable tools I use every day, like WBS and stakeholder mapping. I moved from working on instinct to leading with globally recognized standards and passed my exam with confidence. Highly recommended",
     image:ineza
   },
