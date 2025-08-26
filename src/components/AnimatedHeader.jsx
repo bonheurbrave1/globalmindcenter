@@ -40,7 +40,7 @@ const navLinks = [
     ]
   },
   { name: 'PMP Course', path: '/course' },
-  { name: 'Enroll', target: "__blank", path: 'https://docs.google.com/forms/d/1YY29tM4r8NT3GHT5qcAuIn7jWZmn4Scxl76ysUE_CzM/edit' },
+  { name: 'Enroll', target: "__blank", path: 'https://docs.google.com/forms/d/1YY29tM4r8NT3GHT5qcAuIn7jWZmn4Scxl76ysUE_CzM/prefill' },
   { name: 'Resources', path: '/resources' },
   { name: 'Contact', path: '/contact' },
 ];
@@ -101,7 +101,7 @@ export default function AnimatedHeader() {
               {isSmallScreen ? '1st Sept - 13 Sept' : '1st Sept - 13 Sep 2025'}
             </span>
             <a
-              href="https://docs.google.com/forms/d/1YY29tM4r8NT3GHT5qcAuIn7jWZmn4Scxl76ysUE_CzM/edit"
+              href="https://docs.google.com/forms/d/1YY29tM4r8NT3GHT5qcAuIn7jWZmn4Scxl76ysUE_CzM/prefill"
               target="_blank"
               rel="noopener noreferrer"
               className="ml-1 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500 px-2 py-0.5 text-white text-xs font-bold shadow-sm hover:from-indigo-600 hover:to-pink-600 transition"

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 // ✅ Replace with your Google Form's formResponse URL
 // Example: "https://docs.google.com/forms/d/e/FORM_ID/formResponse"
 const GOOGLE_FORM_ACTION_URL =
-  'https://docs.google.com/forms/d/e/1FAIpQLSfWROAt5gxZHVI0Myl1Dvv-4GynpylSUhSx9MNbEZZmUOpMWA/formResponse';
+  'https://docs.google.com/forms/d/1YY29tM4r8NT3GHT5qcAuIn7jWZmn4Scxl76ysUE_CzM/prefill';
 
 // ✅ Replace with the actual Google Form field entry IDs
 const ENTRY_IDS = {

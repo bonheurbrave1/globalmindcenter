@@ -128,7 +128,7 @@ export default function Resources() {
                 </ul>
               </div>
               <div className="flex flex-col justify-center">
-                <a href="https://docs.google.com/forms/d/1YY29tM4r8NT3GHT5qcAuIn7jWZmn4Scxl76ysUE_CzM/edit">
+                <a href="https://docs.google.com/forms/d/1YY29tM4r8NT3GHT5qcAuIn7jWZmn4Scxl76ysUE_CzM/prefill">
                 <button className="bg-white text-blue-950 px-6 py-3 rounded-lg font-bold hover:bg-blue-50 transition-all shadow-lg">
                   Enroll for Full Access
                 </button>
