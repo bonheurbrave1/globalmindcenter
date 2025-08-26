@@ -67,7 +67,7 @@ export default function TestimonialSlider() {
           viewport={{ once: true }}
           className="text-3xl font-bold text-black text-center mb-12"
         >
-          Student Success Stories
+          Testimonials
         </motion.h2>
 
         <div className="max-w-3xl mx-auto relative">
