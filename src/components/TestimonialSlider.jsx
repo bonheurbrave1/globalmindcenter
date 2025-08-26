@@ -3,6 +3,9 @@ import { useState } from 'react';
 import { ChevronLeft, ChevronRight, MessageSquare } from 'react-feather';
 import jdedieu from "../assets/jdedieu.jpeg"
 import noimage from "../assets/noimage.png"
+import mugabe from "../assets/partners/mugabe.jpg"
+import emanuel from "../assets/emanuel.jpeg"
+import ineza from "../assets/ineza.jpeg"
 const testimonials = [
   {
     id: 1,
@@ -20,17 +23,23 @@ const testimonials = [
     content:
       "Studying for the PMP certification has been a transformative and empowering experience.  It gave me a structured understanding of project management, from planning to delivery. Tools like WBS, stakeholder mapping, and risk analysis now guide my daily practice. The course helped me shift from intuition to globally recognized standards. I highly recommend studying at the Global Mind Center for a focused and supportive learning journey",
     rating: 5,
-    image: noimage
+    image: mugabe
+  },
+ 
+  {
+    id:4,
+    name:"Aurolie Ineza",
+    role: "Project Manager - ICT chamber"
+    content : "My PMP journey with Global Mind Center was transformative. They turned complex concepts into actionable tools I use every day, like WBS and stakeholder mapping. I moved from working on instinct to leading with globally recognized standards and passed my exam with confidence. Highly recommended",
+    image:ineza
   },
   {
-    id: 3,
-    name: "Marie Claire",
-    role: "Construction PM, Kampala",
-    content:
-      "The blended learning approach worked perfectly for my schedule. The online resources were just as valuable as the in-person sessions.",
-    rating: 4,
-    image: "https://randomuser.me/api/portraits/women/65.jpg",
-  },
+    id:5,
+    name : "Bugingo Emmanuel",
+    role: "Director of Local Economic Development at Ministry of Local Government",
+    content:"I successfully earned my PMI-ACP certification thanks to my training. The consistent follow-up and readily available support were crucial to my progress. The comprehensive materials and real-world scenarios made the concepts easy to understand and prepared me perfectly for the exam, which I passed on my first attempt. I highly recommend this learning platform.",
+    image:emanuel
+  }
 ];
 
 export default function TestimonialSlider() {
