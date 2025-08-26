@@ -18,13 +18,13 @@ const trainers = [
   {
     role: "Project Management Consultant | Leadership Development Specialist | MBA Lecturer | Certified Coach",
     name: "James Katumba",
-    degrees: "CAPM|PMP",
+    degrees: "PMP|PMI®ATP|DASM|TPMA",
     social: {
       linkedin: "https://ug.linkedin.com/in/katumba-james-832a6061",
       twitter: "https://twitter.com/jameskatumba3",
       facebook: "https://www.facebook.com/james.katumba.940/",
     },
-    bio: `James Katumba is a seasoned Project Management Consultant, Leadership Development Specialist, and John C. Maxwell Certified Coach with over five years of experience in training and consultancy. He supports organizations across Uganda and Kigali in capacity building, leadership development, and strategic execution. James has facilitated PMP® and CAPM® prep programs with PMI ATPs like MAT Abacus, Agile Masters, and Crosslinks, empowering hundreds of learners. As a lecturer in Heriot-Watt University’s MBA program, he guides students through project governance and stakeholder engagement. His coaching, grounded in trust and accountability, helps teams unlock potential and align with purpose. James brings clarity, strategy, and practical tools to every engagement`,
+    bio: `James Katumba is a seasoned Project Management Consultant, Leadership Development Specialist, and John C. Maxwell Certified Coach with over 18 years of experience in training and consultancy. He supports organizations across Uganda and Kigali in capacity building, leadership development, and strategic execution. James has facilitated PMP® and CAPM® prep programs with PMI ATPs like MAT Abacus, Agile Masters, and Crosslinks, empowering hundreds of learners. As a lecturer in Heriot-Watt University’s MBA program, he guides students through project governance and stakeholder engagement. His coaching, grounded in trust and accountability, helps teams unlock potential and align with purpose. James brings clarity, strategy, and practical tools to every engagement`,
     image: katumba,
   },
   {
