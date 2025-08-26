@@ -18,7 +18,7 @@ const trainers = [
   {
     role: "Project Management Consultant | Leadership Development Specialist | MBA Lecturer | Certified Coach",
     name: "James Katumba",
-    degrees: "PMP|PMI®ATP|DASM|TPMA",
+    degrees: "PMP|PMI®ATP|DASM|TPMA|CAPM",
     social: {
       linkedin: "https://ug.linkedin.com/in/katumba-james-832a6061",
       twitter: "https://twitter.com/jameskatumba3",
@@ -30,7 +30,7 @@ const trainers = [
   {
     role: "facilitators for the September Cohort. ",
     name: "Pamela Nabisaalu",
-    degrees: "PMP|PMI®ATP|DASM|TPMA|CAPM",
+    degrees: "PMP",
     social: {
       linkedin: "https://www.linkedin.com/in/pamelanabisaalu/",
       twitter: "https://twitter.com/NabisaaluPamela",
