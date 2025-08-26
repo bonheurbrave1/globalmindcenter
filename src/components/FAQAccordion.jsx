@@ -3,10 +3,7 @@ import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'react-feather';
 
 const faqs = [
-  {
-    question: "What is the duration of the PMP® course?",
-    answer: "The PMP® certification course runs for 2 months, providing comprehensive coverage of all exam topics."
-  },
+  
   {
     question: "How much does the course cost?",
     answer: "The course fee is 700,000 RWF plus the PMI exam fee of $429. We offer flexible payment options."
