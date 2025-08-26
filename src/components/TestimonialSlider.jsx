@@ -15,7 +15,7 @@ const testimonials = [
   },
   {
     id: 2,
-    name: "Téphane Mugabe",
+    name: "Stéphane Mugabe",
     role: "PMP Candidate | Project Manager & Development Professional at European union delagation to Republic of Rwanda",
     content:
       "Studying for the PMP certification has been a transformative and empowering experience.  It gave me a structured understanding of project management, from planning to delivery. Tools like WBS, stakeholder mapping, and risk analysis now guide my daily practice. The course helped me shift from intuition to globally recognized standards. I highly recommend studying at the Global Mind Center for a focused and supportive learning journey",
