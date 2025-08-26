@@ -58,7 +58,7 @@ export default function About() {
                 <div className="bg-blue-100 text-blue-950 p-2 rounded-full mr-4">
                   <FaGlobeAfrica size={24} />
                 </div>
-                <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
+                <h1 className="text-2xl md:text-4xl font-bold text-gray-900">
                   About{" "}
                   <span className="text-blue-950">Global Mind Center</span>
                 </h1>
@@ -146,7 +146,7 @@ export default function About() {
             className="text-center mb-12"
           >
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              Meet Our <span className="text-blue-950">Expert Trainer</span>
+            Your Partner in Capacity Building-Training and consultant
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Learn from certified professionals with real-world experience
