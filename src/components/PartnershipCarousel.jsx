@@ -178,7 +178,7 @@ const PartnershipCarousel = () => {
                         <img
                           src={partner.src}
                           alt={partner.alt}
-                          className="max-h-16 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                          className="max-h-16 max-w-full object-contain filter grayscale-0 hover:grayscale transition-all duration-300"
                         />
                       </div>
                     ))}
