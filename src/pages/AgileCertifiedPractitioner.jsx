@@ -44,7 +44,7 @@ const AgileCertifiedPractitioner = () => {
             Objective
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed bg-white p-6 rounded-lg shadow-md">
-            To prepare professionals to successfully pass the PMI-ACP exam and demonstrate expertise in agile principles and practices across Scrum, Kanban, Lean, XP, and other agile methodologies.
+            To prepare professionals to successfully pass the PMI exam and demonstrate expertise in agile principles and practices across Scrum, Kanban, Lean, XP, and other agile methodologies.
           </p>
         </section>
 

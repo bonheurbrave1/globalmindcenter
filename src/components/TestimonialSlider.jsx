@@ -37,7 +37,7 @@ const testimonials = [
     id:5,
     name : "Bugingo Emmanuel",
     role: "Director of Local Economic Development at Ministry of Local Government",
-    content:"I successfully earned my PMI-ACP certification thanks to my training. The consistent follow-up and readily available support were crucial to my progress. The comprehensive materials and real-world scenarios made the concepts easy to understand and prepared me perfectly for the exam, which I passed on my first attempt. I highly recommend this learning platform.",
+    content:"I successfully earned my PMI certification thanks to my training. The consistent follow-up and readily available support were crucial to my progress. The comprehensive materials and real-world scenarios made the concepts easy to understand and prepared me perfectly for the exam, which I passed on my first attempt. I highly recommend this learning platform.",
     image:emanuel
   }
 ];
